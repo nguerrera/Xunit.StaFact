@@ -20,6 +20,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.0'">
+    <FrameworkReference Include="Microsoft.DesktopUI" />
+  </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' != 'net45' ">
     <PackageReference Include="xunit" Version="2.4.0" />
   </ItemGroup>
